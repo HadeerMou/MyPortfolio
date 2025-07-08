@@ -7,7 +7,7 @@ function Education({ isDarkMode }) {
       id="education"
       className={`${
         isDarkMode ? "bg-black/60 shadow-white/50 shadow/20" : ""
-      } flex flex-col gap-2 p-8 m-5 rounded-2xl border border-black/10 shadow`}
+      } flex flex-col gap-2 p-8 m-2 rounded-2xl border border-black/10 shadow`}
     >
       {" "}
       <h1 className="text-2xl font-bold">Education</h1>

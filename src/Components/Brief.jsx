@@ -3,7 +3,7 @@ import React from "react";
 function Brief() {
   return (
     <div id="brief" className="flex flex-col items-center justify-center p-10">
-      <h1 className="text-3xl font-bold">Brief Overview</h1>
+      <h1 className="text-2xl font-bold">Brief Overview</h1>
       <p className="mt-4 text-sm tracking-widest text-center">
         I'm a passionate Frontend Software Engineer dedicated to crafting
         seamless and engaging user experiences. With strong skills in modern web

@@ -74,8 +74,8 @@ function Experience({ isDarkMode }) {
     },
   ];
   return (
-    <div id="experience" className={`flex flex-col items-center my-3`}>
-      <h1 className="text-2xl font-bold text-center">
+    <div id="experience" className={`flex flex-col items-center my-4`}>
+      <h1 className="text-3xl font-bold text-center p-2">
         Professional <br /> Experience
       </h1>
       {experiences.map((exp) => (
@@ -83,7 +83,7 @@ function Experience({ isDarkMode }) {
           key={exp.id}
           className={`${
             isDarkMode ? "bg-black/60 shadow-white/50 shadow/20" : ""
-          } flex flex-col gap-3 p-5 m-5 rounded-2xl border border-black/10 shadow`}
+          } flex flex-col gap-3 p-5 m-2 rounded-2xl border border-black/10 shadow`}
         >
           <div className="flex items-center gap-4">
             {exp.logo ? (

@@ -14,13 +14,39 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@layer utilities {
+  .stars {
+    background: #000;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    z-index: 0;
+    position: relative;
+  }
 
-/* h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-} */
+  .stars::after {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    top: -30%;
+    left: 30%;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
+      radial-gradient(1.5px 1.5px at 100px 150px, white, transparent),
+      radial-gradient(1px 1px at 200px 250px, white, transparent),
+      radial-gradient(2px 2px at 300px 350px, white, transparent);
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    animation: moveStars 90s linear infinite;
+    opacity: 0.4;
+    pointer-events: none;
+  }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  @keyframes moveStars {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
 }

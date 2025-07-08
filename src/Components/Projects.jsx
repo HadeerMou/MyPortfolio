@@ -39,17 +39,17 @@ function Projects({ isDarkMode }) {
     },
   ];
   return (
-    <div id="projects" className={`flex flex-col items-center my-3`}>
-      <h1 className="text-2xl font-bold text-center">Featured Projects</h1>
+    <div id="projects" className={`flex flex-col items-center my-4`}>
+      <h1 className="text-3xl font-bold text-center p-2">Featured Projects</h1>
       {Projects.map((proj) => (
         <div
           key={proj.id}
           className={`${
             isDarkMode ? "bg-black/60 shadow-white/50 shadow/20" : ""
-          } flex flex-col gap-3 m-5 rounded-2xl border border-black/10 shadow`}
+          } flex flex-col gap-3 m-2 rounded-2xl border border-black/10 shadow`}
         >
           <div>
-            <a href={proj.live}>
+            <a href={proj.live} target="_blank" rel="noopener noreferrer">
               <img
                 className="rounded-2xl rounded-b-md border-b-2 border-pink-900/50 opacity-90 hover:opacity-100 cursor-pointer"
                 src={proj.img}
@@ -81,13 +81,16 @@ function Projects({ isDarkMode }) {
                 <li>{feature}</li>
               </ul>
             ))}
-            <button
+            <a
+              href={proj.live}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${
                 isDarkMode ? "bg-pink-200 text-black" : "bg-pink-700 text-white"
               } flex items-center gap-2 py-1 px-3 w-fit rounded-full font-bold text-xs shadow-md hover:shadow-2xl cursor-pointer`}
             >
               Live <FiExternalLink />
-            </button>
+            </a>
           </div>
         </div>
       ))}

@@ -16,21 +16,22 @@ function App() {
 
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add("dark", "stars");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("dark", "stars");
     }
   }, [isDarkMode]);
 
   return (
     <div
       className={`${
-        isDarkMode ? "dark" : "bg-white text-black"
+        isDarkMode ? "dark stars" : "bg-white text-black"
       } min-h-screen transition-colors duration-300`}
     >
       <Header isDarkMode={isDarkMode} handleToggle={handleToggle} />
       <main className="max-w-5xl mx-auto px-4">
         <Brief isDarkMode={isDarkMode} />
+        <hr className="border opacity-70 text-pink-100 rounded shadow mb-8" />
         <Education isDarkMode={isDarkMode} />
         <Experience isDarkMode={isDarkMode} />
         <Projects isDarkMode={isDarkMode} />
