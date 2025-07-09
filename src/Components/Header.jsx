@@ -28,7 +28,10 @@ function Header({ isDarkMode, handleToggle, isMenuOpen, setIsMenuOpen }) {
           src="/assets/meOpacity.jpg"
           alt=""
         />
-        <a href="#" className="text-center text-xl md:text-2xl tracking-wide">
+        <a
+          href="#"
+          className="flex text-center justify-center text-xl md:text-2xl tracking-wide"
+        >
           Eng.Hadeer
         </a>
       </div>
