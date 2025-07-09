@@ -12,7 +12,7 @@ function Header({ isDarkMode, handleToggle, isMenuOpen, setIsMenuOpen }) {
       } p-5 flex md:grid md:grid-cols-3 justify-between items-center font-bold`}
     >
       <div className="hidden md:flex gap-20 justify-start ms-30 opacity-50">
-        <a href="#contact" className="hover:underline">
+        <a href="#me" className="hover:underline">
           Connect
         </a>
         <a href="#brief" className="hover:underline">
