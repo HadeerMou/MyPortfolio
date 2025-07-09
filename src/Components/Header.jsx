@@ -12,14 +12,14 @@ function Header({ isDarkMode, handleToggle, isMenuOpen, setIsMenuOpen }) {
       } p-5 flex md:grid md:grid-cols-3 justify-between items-center font-bold`}
     >
       <div className="hidden md:flex gap-20 justify-start ms-30 opacity-50">
+        <a href="#contact" className="hover:underline">
+          Connect
+        </a>
         <a href="#brief" className="hover:underline">
           Brief
         </a>
         <a href="#education" className="hover:underline">
           Education
-        </a>
-        <a href="#experience" className="hover:underline">
-          Experience
         </a>
       </div>
       <div className="flex md:inline items-center gap-2">
@@ -37,14 +37,14 @@ function Header({ isDarkMode, handleToggle, isMenuOpen, setIsMenuOpen }) {
       </div>
       <div className="flex items-center justify-end gap-4">
         <div className="hidden md:flex gap-20 me-30 opacity-50">
+          <a href="#experience" className="hover:underline">
+            Experience
+          </a>
           <a href="#projects" className="hover:underline">
             Projects
           </a>
           <a href="#skills" className="hover:underline">
             Skills
-          </a>
-          <a href="#contact" className="hover:underline">
-            Contact
           </a>
         </div>
         <div className="flex items-center gap-2">
