@@ -2,7 +2,10 @@ import React from "react";
 
 function Brief() {
   return (
-    <div id="brief" className="flex flex-col items-center justify-center p-10">
+    <div
+      id="brief"
+      className="flex flex-col items-center justify-center p-10 mb-5 border-2 rounded-2xl border-pink-100 shadow-lg"
+    >
       <h1 className="text-2xl font-bold">Brief Overview</h1>
       <p className="mt-4 text-sm tracking-widest text-center">
         I'm a passionate Frontend Software Engineer dedicated to crafting

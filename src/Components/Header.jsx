@@ -1,11 +1,13 @@
 import { FaToggleOff } from "react-icons/fa6";
 import { FaToggleOn } from "react-icons/fa6";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import Menu from "./Menu";
+import { useState } from "react";
 
-function Header({ isDarkMode, handleToggle }) {
+function Header({ isDarkMode, handleToggle, isMenuOpen, setIsMenuOpen }) {
   return (
     <div
-      className={`${
+      className={`fixed top-0 left-0 right-0 z-50 ${
         isDarkMode ? "bg-pink-500/90" : "bg-pink-100"
       } p-5 flex md:grid md:grid-cols-3 justify-between items-center font-bold`}
     >
@@ -20,7 +22,16 @@ function Header({ isDarkMode, handleToggle }) {
           Experience
         </a>
       </div>
-      <h2 className="text-center text-xl md:text-2xl">Welcome to my place</h2>
+      <div className="flex md:inline items-center gap-2">
+        <img
+          className="md:hidden w-8 rounded-full border-2 border-pink-300"
+          src="/assets/meOpacity.jpg"
+          alt=""
+        />
+        <a href="#" className="text-center text-xl md:text-2xl tracking-wide">
+          Eng.Hadeer
+        </a>
+      </div>
       <div className="flex items-center justify-end gap-4">
         <div className="hidden md:flex gap-20 me-30 opacity-50">
           <a href="#projects" className="hover:underline">
@@ -45,7 +56,10 @@ function Header({ isDarkMode, handleToggle }) {
               className="text-xl lg:text-3xl"
             />
           )}
-          <HiOutlineMenuAlt4 className="text-xl md:hidden lg:hidden" />
+          <HiOutlineMenuAlt4
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-xl md:hidden lg:hidden"
+          />
         </div>
       </div>
     </div>
