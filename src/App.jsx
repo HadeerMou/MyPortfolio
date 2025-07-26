@@ -50,18 +50,33 @@ function App() {
           <h1 className="text-3xl font-bold text-pink-50 custom-outline">
             Hadeer Abdelrazik
           </h1>
-          <p>Software Engineer | React Frontend Developer</p>
-          <p className="flex items-center text-xs opacity-50">
+          <p className="font-bold opacity-70">
+            Software Engineer <span className="text-pink-300">|</span> React
+            Frontend Developer
+          </p>
+          <p className="flex items-center gap-1 text-xs opacity-50">
             <TiLocation /> Nozha, Cairo, Egypt
           </p>
           <div className="flex items-center gap-2 mt-4 text-3xl cursor-pointer  animate-flash">
-            <a href="https://github.com/HadeerMou">
+            <a
+              href="https://github.com/HadeerMou"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaSquareGithub />
             </a>
-            <a href="https://www.linkedin.com/in/hadeermouwad/">
+            <a
+              href="https://www.linkedin.com/in/hadeermouwad/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin />
             </a>
-            <a href="https://www.behance.net/hadeerMouwad">
+            <a
+              href="https://www.behance.net/hadeerMouwad"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaBehanceSquare />
             </a>
           </div>

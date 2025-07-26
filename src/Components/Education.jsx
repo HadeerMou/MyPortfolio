@@ -11,7 +11,12 @@ function Education({ isDarkMode }) {
     >
       {" "}
       <h1 className="text-2xl font-bold">Education</h1>
-      <ul className="text-sm mt-4 space-y-2">
+      <ul className="flex items-center gap-3 text-sm mt-4 space-y-2">
+        <img
+          className="w-12"
+          src="https://www.globalacademia.com/wp-content/uploads/okan-university-logo.jpg"
+          alt=""
+        />
         <li>
           <h2 className="font-bold">
             Bachelor's Degree in Software Engineering

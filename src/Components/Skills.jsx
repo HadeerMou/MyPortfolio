@@ -23,6 +23,7 @@ import { SiRailway } from "react-icons/si";
 import { SiHostinger } from "react-icons/si";
 import { SiSwagger } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+import { SiI18Next } from "react-icons/si";
 
 function Skills({ isDarkMode }) {
   const skills = [
@@ -48,6 +49,8 @@ function Skills({ isDarkMode }) {
         { icon: <RiTailwindCssFill />, name: "TailwindCSS" },
         { icon: <FaSass />, name: "SASS/SCSS" },
         { icon: null, name: "ES6+" },
+        { icon: null, name: "Motion" },
+        { icon: <SiI18Next />, name: "react-i18next" },
       ],
       icon: <FaCode />,
     },
@@ -92,34 +95,36 @@ function Skills({ isDarkMode }) {
   return (
     <div id="skills">
       <h1 className="text-3xl font-bold text-center p-2">Skills</h1>
-      {skills.map((skill) => (
-        <div
-          key={skill.id}
-          className={`${
-            isDarkMode ? "bg-black/60 shadow-white/50 shadow/20" : ""
-          } flex flex-col justify-center items-center gap-3 p-4 m-2 rounded-2xl border border-black/10 shadow`}
-        >
-          <span className="text-2xl bg-pink-50 text-black/80 p-2 rounded-full">
-            {skill.icon}
-          </span>
-          <h1 className="font-bold">{skill.category}</h1>
-          <div className="flex flex-wrap gap-2">
-            {skill.skills.map((skill, index) => (
-              <p
-                key={index}
-                className={`${
-                  isDarkMode
-                    ? "bg-pink-50 text-black"
-                    : "bg-pink-500 text-white"
-                } flex items-center gap-1 text-xs rounded-md border py-1 px-2 border-black/10 shadow`}
-              >
-                {skill.icon}
-                {skill.name}
-              </p>
-            ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 my-3">
+        {skills.map((skill) => (
+          <div
+            key={skill.id}
+            className={`${
+              isDarkMode ? "bg-black/60 shadow-white/50 shadow/20" : ""
+            } flex flex-col justify-center items-center gap-3 p-4 m-2 rounded-2xl border border-black/10 shadow`}
+          >
+            <span className="text-2xl bg-pink-50 text-black/80 p-2 rounded-full">
+              {skill.icon}
+            </span>
+            <h1 className="font-bold">{skill.category}</h1>
+            <div className="flex flex-wrap gap-2">
+              {skill.skills.map((skill, index) => (
+                <p
+                  key={index}
+                  className={`${
+                    isDarkMode
+                      ? "bg-pink-50 text-black"
+                      : "bg-pink-500 text-white"
+                  } flex items-center gap-1 text-xs rounded-md border py-1 px-2 border-black/10 shadow`}
+                >
+                  {skill.icon}
+                  {skill.name}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
