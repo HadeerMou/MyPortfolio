@@ -82,6 +82,16 @@ function Projects({ isDarkMode }) {
       features: [],
       field: "UI/UX",
     },
+    {
+      id: 7,
+      name: "InspoFA Landing Page",
+      live: "https://landing-page-design-azure.vercel.app/",
+      img: "/assets/inspoFA.png",
+      descrption: "InspoFA modern responsive Landing Page.",
+      tech: ["React", "CSS", "Figma", "Vercel"],
+      features: [],
+      field: "web",
+    },
   ];
   const fields = ["All", ...new Set(Projects.map((proj) => proj.field))];
 
