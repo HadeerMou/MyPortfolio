@@ -122,6 +122,26 @@ function Projects({ isDarkMode }) {
       features: [],
       field: "web",
     },
+    {
+      id: 10,
+      name: "Furniro Ecommerce Website",
+      live: "https://furniro-e-commerce-ecru.vercel.app/",
+      img: "/assets/furniro.png",
+      descrption:
+        "Furniro responsive ecomerce website (Home, products and cart pages + cart component).",
+      tech: [
+        "Nextjs",
+        "Reactjs",
+        "TypeScript",
+        "Tailwindcss",
+        "DaisyUi",
+        "CSS",
+        "lucide-react",
+        "Vercel",
+      ],
+      features: [],
+      field: "web",
+    },
   ];
   const fields = ["All", ...new Set(Projects.map((proj) => proj.field))];
 

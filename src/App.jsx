@@ -51,8 +51,8 @@ function App() {
             Hadeer Abdelrazik
           </h1>
           <p className="font-bold opacity-70">
-            Software Engineer <span className="text-pink-300">|</span> React
-            Frontend Developer
+            Software Engineer <span className="text-pink-300">|</span>{" "}
+            Reactjs/Nextjs Web Developer | React Native App Developer
           </p>
           <p className="flex items-center gap-1 text-xs opacity-50">
             <TiLocation /> Nozha, Cairo, Egypt

@@ -8,13 +8,14 @@ function Brief() {
     >
       <h1 className="text-2xl font-bold">Brief Overview</h1>
       <p className="mt-4 text-sm tracking-widest text-center">
-        I'm a passionate Frontend Software Engineer dedicated to crafting
+        I'm a passionate Software Engineer and Designer dedicated to crafting
         seamless and engaging user experiences. With strong skills in modern web
-        technologies like HTML, CSS, JavaScript, and frameworks such as React, I
-        specialize in building responsive, accessible, and high-performance web
-        applications. I enjoy transforming complex ideas into intuitive designs,
-        writing clean, maintainable code, and continuously learning to stay
-        ahead in the ever-evolving world of frontend development.
+        technologies like HTML, CSS, JavaScript, and frameworks such as Nextjs,
+        Reactjs and React Native, I specialize in building responsive,
+        accessible, and high-performance web and mobile applications. I enjoy
+        transforming complex ideas into intuitive designs, writing clean,
+        maintainable code, and continuously learning to stay ahead in the
+        ever-evolving world of frontend development.
       </p>
       <div className="mt-8 text-sm">
         <h2 className="font-bold text-base mb-3">What I Offer</h2>
@@ -34,6 +35,15 @@ function Brief() {
           <li>
             Solid skills in API integration and backend communication,
             connecting frontend interfaces to powerful data and services.
+          </li>
+          <li>
+            Proficient in cross-platform mobile app development using React
+            Native and Expo, delivering seamless experiences on both iOS and
+            Android.
+          </li>
+          <li>
+            Skilled in designing mobile-first interfaces with performance and
+            usability in mind.
           </li>
           <li>
             Experience working in Agile teams, collaborating effectively and

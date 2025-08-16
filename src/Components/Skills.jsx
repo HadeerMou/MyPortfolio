@@ -24,6 +24,14 @@ import { SiHostinger } from "react-icons/si";
 import { SiSwagger } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 import { SiI18Next } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { RiNextjsFill } from "react-icons/ri";
+import { TbBrandReactNative } from "react-icons/tb";
+import { SiExpo } from "react-icons/si";
+import { IoLogoAndroid } from "react-icons/io";
+import { FaApple } from "react-icons/fa";
+import { TbDeviceMobileCode } from "react-icons/tb";
 
 function Skills({ isDarkMode }) {
   const skills = [
@@ -32,6 +40,7 @@ function Skills({ isDarkMode }) {
       category: "Languages",
       skills: [
         { icon: <IoLogoJavascript />, name: "JavaScript" },
+        { icon: <BiLogoTypescript />, name: "TypeScript" },
         { icon: <FaPython />, name: "Python" },
         { icon: null, name: "C" },
       ],
@@ -44,24 +53,37 @@ function Skills({ isDarkMode }) {
         { icon: <FaHtml5 />, name: "HTML" },
         { icon: <FaCss3Alt />, name: "CSS" },
         { icon: <IoLogoJavascript />, name: "Javascript" },
-        { icon: <FaReact />, name: "React" },
+        { icon: <BiLogoTypescript />, name: "TypeScript" },
+        { icon: <FaReact />, name: "Reactjs" },
+        { icon: <RiNextjsFill />, name: "Nextjs" },
         { icon: <FaBootstrap />, name: "Bootstrap" },
         { icon: <RiTailwindCssFill />, name: "TailwindCSS" },
         { icon: <FaSass />, name: "SASS/SCSS" },
         { icon: null, name: "ES6+" },
-        { icon: null, name: "Motion" },
+        { icon: <TbBrandFramerMotion />, name: "Framer Motion" },
         { icon: <SiI18Next />, name: "react-i18next" },
       ],
       icon: <FaCode />,
     },
     {
       id: 3,
+      category: "Mobile Development",
+      skills: [
+        { icon: <TbBrandReactNative />, name: "React Native" },
+        { icon: <SiExpo />, name: "Expo" },
+        { icon: <IoLogoAndroid />, name: "Android Development basics" },
+        { icon: <FaApple />, name: "iOS Development basics" },
+      ],
+      icon: <TbDeviceMobileCode />,
+    },
+    {
+      id: 4,
       category: "UI/UX",
       skills: [{ icon: <PiFigmaLogoBold />, name: "Figma" }],
       icon: <FaQuidditch />,
     },
     {
-      id: 4,
+      id: 5,
       category: "Backend Basics & Database",
       skills: [
         { icon: <FaNodeJs />, name: "Nodejs" },
@@ -71,7 +93,7 @@ function Skills({ isDarkMode }) {
       icon: <FaDatabase />,
     },
     {
-      id: 5,
+      id: 6,
       category: "Version Control",
       skills: [
         { icon: <FaGitAlt />, name: "Git" },
@@ -80,7 +102,7 @@ function Skills({ isDarkMode }) {
       icon: <FaGitAlt />,
     },
     {
-      id: 6,
+      id: 7,
       category: "Deployment & Testing",
       skills: [
         { icon: <IoLogoVercel />, name: "Vercel" },
