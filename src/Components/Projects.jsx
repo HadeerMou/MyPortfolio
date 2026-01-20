@@ -1,158 +1,22 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
+import { ProjectsData } from "../Data/ProjectsData";
 
 function Projects({ isDarkMode }) {
-  const Projects = [
-    {
-      id: 1,
-      name: "Alhalapi E-commerce",
-      live: "https://alhalabi-website.vercel.app/",
-      img: "/assets/Alhalapi.png",
-      descrption: "Scalable e-commerce platform with seamless API integration",
-      tech: [
-        "React",
-        "TailwindCSS",
-        "Figma",
-        "react-i18next",
-        "Motion",
-        "Swagger",
-      ],
-      features: [],
-      field: "web",
-    },
-    {
-      id: 2,
-      name: "CHARMI E-commerce",
-      live: "https://www.charmi.shop/",
-      img: "/assets/charmi.png",
-      descrption: "Scalable e-commerce platform with seamless API integration",
-      tech: [
-        "React",
-        "BootStrap",
-        "CSS",
-        "Figma",
-        "Nest",
-        "MySQL",
-        "Swagger",
-        "Deployment",
-        "axios",
-      ],
-      features: [],
-      field: "web",
-    },
-    {
-      id: 3,
-      name: "CULT agency Website Redesign",
-      live: "https://cult-redesign-itc5.vercel.app/",
-      img: "/assets/cult.png",
-      descrption: "CULT agency responsive Website Redesign",
-      tech: ["React", "vite", "CSS", "TailwindCSS", "Figma", "Vercel"],
-      features: [],
-      field: "web",
-    },
-    {
-      id: 4,
-      name: "MAMZI | Fashion brand identity redesign.",
-      live: "https://www.behance.net/gallery/212909843/MAMZI-Fashion-brand-identity-redesign",
-      img: "/assets/mamzi.png",
-      descrption:
-        "MAMZI Fashion brand identity redesign. Includes logo and packaging",
-      tech: ["Figma"],
-      features: [],
-      field: "UI/UX",
-    },
-    {
-      id: 5,
-      name: "MAMZI | Fashion brand identity redesign.",
-      live: "https://www.behance.net/gallery/197023069/Step-away-E-Commerce-UI",
-      img: "/assets/stepaway.png",
-      descrption:
-        "Step away E-Commerce App UI design. Includes product pages, cart, checkout and other pages.",
-      tech: ["Figma"],
-      features: [],
-      field: "UI/UX",
-    },
-    {
-      id: 6,
-      name: "Qafta Web Design",
-      live: "https://www.behance.net/gallery/215026057/Qafta-Web-Design",
-      img: "/assets/qafta.png",
-      descrption:
-        "Qafta Web Design. Includes homepage, and other pages with animations.",
-      tech: ["Figma"],
-      features: [],
-      field: "UI/UX",
-    },
-    {
-      id: 7,
-      name: "InspoFA Landing Page",
-      live: "https://landing-page-design-azure.vercel.app/",
-      img: "/assets/inspoFA.png",
-      descrption: "InspoFA modern responsive Landing Page.",
-      tech: ["React", "CSS", "Figma", "Vercel"],
-      features: [],
-      field: "web",
-    },
-    {
-      id: 8,
-      name: "To Do App",
-      live: "https://to-do-app-eight-hazel.vercel.app/",
-      img: "/assets/todo.png",
-      descrption: "To Do App modern responsive.",
-      tech: ["React", "BootStrap", "CSS", "Figma", "Vercel"],
-      features: [],
-      field: "web",
-    },
-    {
-      id: 9,
-      name: "LAMSA | E-commerce",
-      live: "https://lamsa-web.vercel.app/",
-      img: "/assets/lamsa.png",
-      descrption: "LAMSA E-commerce modern responsive website.",
-      tech: [
-        "React",
-        "vite",
-        "TailwindCSS",
-        "axios",
-        "Figma",
-        "Vercel",
-        "Nest",
-        "prisma",
-      ],
-      features: [],
-      field: "web",
-    },
-    {
-      id: 10,
-      name: "Furniro Ecommerce Website",
-      live: "https://furniro-e-commerce-ecru.vercel.app/",
-      img: "/assets/furniro.png",
-      descrption:
-        "Furniro responsive ecomerce website (Home, products and cart pages + cart component).",
-      tech: [
-        "Nextjs",
-        "Reactjs",
-        "TypeScript",
-        "Tailwindcss",
-        "DaisyUi",
-        "CSS",
-        "lucide-react",
-        "Vercel",
-      ],
-      features: [],
-      field: "web",
-    },
-  ];
-  const fields = ["All", ...new Set(Projects.map((proj) => proj.field))];
+  const fields = ["All", ...new Set(ProjectsData.map((proj) => proj.field))];
 
-  // Step 2: state for selected field
+  // state for selected field
   const [selectedField, setSelectedField] = useState("All");
 
-  // Step 3: filter projects
-  const filteredProjects =
-    selectedField === "All"
-      ? Projects
-      : Projects.filter((proj) => proj.field === selectedField);
+  // filter projects using usememo to stop unnecessary renders/re-calculations
+  const filteredProjects = useMemo(
+    () =>
+      selectedField === "All"
+        ? ProjectsData
+        : ProjectsData.filter((proj) => proj.field === selectedField),
+    [selectedField]
+  );
+
   return (
     <div id="projects" className={`flex flex-col items-center my-4`}>
       <h1 className="text-3xl font-bold text-center p-2">Featured Projects</h1>
@@ -192,9 +56,9 @@ function Projects({ isDarkMode }) {
                 />
               </a>
             </div>
-            <div className="flex flex-col gap-2 px-5 py-3">
+            <div className="flex flex-col gap-2 px-5 py-3 h-full">
               <h1 className="text-2xl font-bold">{proj.name}</h1>
-              <p className="text-xs">{proj.descrption}</p>
+              <p className="text-xs">{proj.description}</p>
               <h2 className="text-sm font-bold">Technologies:</h2>
               <div className="flex flex-wrap gap-1">
                 {proj.tech.map((tech, index) => (
@@ -212,7 +76,7 @@ function Projects({ isDarkMode }) {
               </div>
               <h2 className="text-sm font-bold">Key Features:</h2>
               {proj.features.map((feature, index) => (
-                <ul key={index} className="text-sm mt-4 space-y-2">
+                <ul key={index} className="text-sm list-disc list-inside">
                   <li>{feature}</li>
                 </ul>
               ))}
@@ -224,7 +88,7 @@ function Projects({ isDarkMode }) {
                   isDarkMode
                     ? "bg-pink-200 text-black"
                     : "bg-pink-700 text-white"
-                } flex items-center gap-2 py-1 px-3 w-fit rounded-full font-bold text-xs shadow-md hover:shadow-2xl cursor-pointer`}
+                } flex items-center mt-auto gap-1 py-2 px-4 w-fit rounded-full font-bold text-xs shadow-md hover:shadow-2xl cursor-pointer`}
               >
                 Live <FiExternalLink />
               </a>
