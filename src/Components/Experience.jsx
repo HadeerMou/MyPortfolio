@@ -5,6 +5,33 @@ function Experience({ isDarkMode }) {
   const experiences = [
     {
       id: 1,
+      title: "Full Stack Web Developer & Administrator",
+      company: "TUT E-Commerce",
+      date: "SEP 2025 - Present",
+      location: "Maadi - Cairo, Egypt",
+      logo: "assets/tutlogo.webp",
+      skills: [
+        "Wordpress",
+        "WooCommerce",
+        "Woodmart",
+        "Seo",
+        "NextJS",
+        "ExpressJS",
+        "PostgreSQL",
+        "Docker",
+        "Adminer",
+        "Hostinger",
+        "Git"
+      ],
+      description: [
+        "Manage and maintain the company's WordPress & WooCommerce e-commerce website; customize the Woodmart theme, build sections with Slider Revolution, and optimize SEO & performance",
+        "Built a separate full-stack e-commerce web application using Next.js, Express.js, and PostgreSQL, containerized with Docker and managed via Adminer; deployed on Hostinger with Git-based version control.",
+        "Owned backend implementation: product catalog, order processing, contact form via Nodemailer, Google sign-in authentication, customer reviews, and multi-language support with i18n.",
+        "Owned the core frontend UI design and implementation for the e-commerce application.",
+      ],
+    },
+    {
+      id: 2,
       title: "Frontend React Developer",
       company: "Expansion Branding Agency",
       date: "Jan 2025 - Present",
@@ -28,7 +55,7 @@ function Experience({ isDarkMode }) {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "CyberSecurity Intern",
       company: "Depi Cybersecurity Program",
       date: "SEP 2024 – Present",
@@ -40,7 +67,7 @@ function Experience({ isDarkMode }) {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "Software Engineer Intern",
       company: "Scramblebit Company",
       date: "JUN 2023 - SEP 2023",
@@ -61,7 +88,7 @@ function Experience({ isDarkMode }) {
       ],
     },
     {
-      id: 4,
+      id: 5,
       title: "Software Developer Intern",
       company: "GrosWare Company",
       date: "JUL 2022 - SEP 2022",
