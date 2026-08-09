@@ -281,4 +281,17 @@ export const ProjectsData = [
     ],
     field: "web",
   },
+  {
+    id: 12,
+    name: "Accessories E-Commerce",
+    live: "https://accessories-website-frontend.vercel.app/",
+    img: "/assets/accstore.png",
+    description: "Fullstack Modern Ecommerce Accessories App",
+    tech: ["NextJS", "ExpressJS", "TailwindCSS", "PostgreSQL", "Docker", "Adminer", "i18n", "Vercel"],
+    features: [
+      "Admin dashboard to manage website data and content",
+      "Modern UI design for E-Commerce",
+    ],
+    field: "web",
+  },
 ];
