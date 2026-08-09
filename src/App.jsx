@@ -51,8 +51,8 @@ function App() {
             Hadeer Abdelrazik
           </h1>
           <p className="font-bold opacity-70">
-            Software Engineer <span className="text-pink-300">|</span>{" "}
-            Reactjs/Nextjs Web Developer | React Native App Developer
+            Software Engineer <span className="text-pink-300">|</span> Fullstack
+            Developer | React Native App Developer
           </p>
           <p className="flex items-center gap-1 text-xs opacity-50">
             <TiLocation /> Nozha, Cairo, Egypt
@@ -82,7 +82,7 @@ function App() {
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <a
-              href="/assets/HadeerAbdelrazik.pdf"
+              href="/assets/Hadeer_Abdelrazik_Full_Stack.pdf"
               download
               className="flex items-center gap-1 text-xs px-2 py-2 mt-2 bg-pink-100 text-black/80 outline-black/70 outline-2 rounded-full hover:bg-pink-500 transition"
             >
@@ -99,7 +99,7 @@ function App() {
             </a>
             <a
               className="flex items-center gap-1 px-2 py-2 mt-2 bg-pink-100 text-black/80  outline-black/70 outline-2 rounded-full hover:bg-pink-500 transition"
-              href="mailto:hadeer.mouwad@gmail.com"
+              href="mailto:hadeermohammed412@gmail.com"
             >
               <MdEmail />
             </a>

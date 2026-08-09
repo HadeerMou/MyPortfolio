@@ -8,14 +8,14 @@ function Brief() {
     >
       <h1 className="text-2xl font-bold">Brief Overview</h1>
       <p className="mt-4 text-sm tracking-widest text-center">
-        I'm a passionate Software Engineer and Designer dedicated to crafting
-        seamless and engaging user experiences. With strong skills in modern web
-        technologies like HTML, CSS, JavaScript, and frameworks such as Nextjs,
-        Reactjs and React Native, I specialize in building responsive,
-        accessible, and high-performance web and mobile applications. I enjoy
-        transforming complex ideas into intuitive designs, writing clean,
-        maintainable code, and continuously learning to stay ahead in the
-        ever-evolving world of frontend development.
+        I'm a full-stack developer who builds polished, performant web and
+        mobile solutions from design through deployment. I work with modern
+        frontend technologies like HTML, CSS, JavaScript, React, Next.js,
+        TailwindCSS, and React Native, while also handling backend services,
+        APIs, databases, and deployment workflows using Node.js, NestJS,
+        ExpressJS, Prisma, MySQL, PostgreSQL, and Vercel. I enjoy turning
+        complex requirements into intuitive experiences with clean, maintainable
+        code and thoughtful UX.
       </p>
       <div className="mt-8 text-sm">
         <h2 className="font-bold text-base mb-3">What I Offer</h2>
@@ -25,12 +25,12 @@ function Brief() {
             functional interfaces.
           </li>
           <li>
-            Strong skills in modern frontend technologies like HTML, CSS,
-            JavaScript, React, TailwindCSS, etc.
+            Strong skills across frontend and backend technologies, including
+            React, Next.js, TailwindCSS, Node.js, NestJS, Prisma, and MySQL.
           </li>
           <li>
-            Expertise in building cross-platform web applications for seamless
-            user experiences on any device.
+            Expertise in building full-stack applications with responsive UI,
+            reliable APIs, and database-backed workflows.
           </li>
           <li>
             Solid skills in API integration and backend communication,

@@ -32,6 +32,7 @@ import { SiExpo } from "react-icons/si";
 import { IoLogoAndroid } from "react-icons/io";
 import { FaApple } from "react-icons/fa";
 import { TbDeviceMobileCode } from "react-icons/tb";
+import { DiDocker } from "react-icons/di";
 
 function Skills({ isDarkMode }) {
   const skills = [
@@ -87,8 +88,12 @@ function Skills({ isDarkMode }) {
       category: "Backend Basics & Database",
       skills: [
         { icon: <FaNodeJs />, name: "Nodejs" },
+        { name: "Nestjs", icon: <FaNodeJs /> },
+        { name: "Expressjs", icon: <FaNodeJs /> },
         { icon: <GrMysql />, name: "MySQL" },
         { icon: <SiPrisma />, name: "Prisma" },
+        { name: "Docker", icon: <DiDocker /> },
+        { name: "PostgreSQL", icon: <GrMysql /> },
       ],
       icon: <FaDatabase />,
     },
@@ -129,7 +134,7 @@ function Skills({ isDarkMode }) {
               {skill.icon}
             </span>
             <h1 className="font-bold">{skill.category}</h1>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {skill.skills.map((skill, index) => (
                 <p
                   key={index}

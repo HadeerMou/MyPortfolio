@@ -7,15 +7,16 @@ function Projects({ isDarkMode }) {
 
   // state for selected field
   const [selectedField, setSelectedField] = useState("All");
+  const [expandedTechIds, setExpandedTechIds] = useState([]);
 
   // filter projects using usememo to stop unnecessary renders/re-calculations
-  const filteredProjects = useMemo(
-    () =>
+  const filteredProjects = useMemo(() => {
+    const projects =
       selectedField === "All"
-        ? ProjectsData
-        : ProjectsData.filter((proj) => proj.field === selectedField),
-    [selectedField]
-  );
+        ? ProjectsData.slice()
+        : ProjectsData.filter((proj) => proj.field === selectedField);
+    return projects.reverse();
+  }, [selectedField]);
 
   return (
     <div id="projects" className={`flex flex-col items-center my-4`}>
@@ -31,8 +32,8 @@ function Projects({ isDarkMode }) {
                   ? "bg-pink-200 text-black"
                   : "bg-pink-600 text-white"
                 : isDarkMode
-                ? "bg-black/30 text-white border-white/20"
-                : "bg-gray-100 text-black border-black/10"
+                  ? "bg-black/30 text-white border-white/20"
+                  : "bg-gray-100 text-black border-black/10"
             }`}
           >
             {field}
@@ -47,12 +48,12 @@ function Projects({ isDarkMode }) {
               isDarkMode ? "bg-black/60 shadow-white/50 shadow/20" : ""
             } flex flex-col gap-3 m-2 rounded-2xl border border-black/10 shadow`}
           >
-            <div>
+            <div className="overflow-hidden rounded-2xl rounded-b-md border-b-2 border-pink-900/50">
               <a href={proj.live} target="_blank" rel="noopener noreferrer">
                 <img
-                  className="rounded-2xl rounded-b-md border-b-2 border-pink-900/50 opacity-90 hover:opacity-100 cursor-pointer"
+                  className="h-56 w-full object-cover opacity-90 hover:opacity-100 cursor-pointer"
                   src={proj.img}
-                  alt=""
+                  alt={proj.name}
                 />
               </a>
             </div>
@@ -61,18 +62,42 @@ function Projects({ isDarkMode }) {
               <p className="text-xs">{proj.description}</p>
               <h2 className="text-sm font-bold">Technologies:</h2>
               <div className="flex flex-wrap gap-1">
-                {proj.tech.map((tech, index) => (
-                  <p
-                    key={index}
-                    className={`${
-                      isDarkMode
-                        ? "bg-pink-50 text-black"
-                        : "bg-pink-500 text-white"
-                    } text-xs rounded-md border py-1 px-2 border-black/10 shadow`}
+                {proj.tech
+                  .slice(
+                    0,
+                    expandedTechIds.includes(proj.id) ? proj.tech.length : 4,
+                  )
+                  .map((tech, index) => (
+                    <p
+                      key={index}
+                      className={`${
+                        isDarkMode
+                          ? "bg-pink-50 text-black"
+                          : "bg-pink-500 text-white"
+                      } text-xs rounded-md border py-1 px-2 border-black/10 shadow`}
+                    >
+                      {tech}
+                    </p>
+                  ))}
+                {proj.tech.length > 4 && (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setExpandedTechIds((prev) =>
+                        prev.includes(proj.id)
+                          ? prev.filter((id) => id !== proj.id)
+                          : [...prev, proj.id],
+                      )
+                    }
+                    className={`text-xs font-semibold underline transition hover:text-pink-700 ${
+                      isDarkMode ? "text-pink-200" : "text-pink-600"
+                    }`}
                   >
-                    {tech}
-                  </p>
-                ))}
+                    {expandedTechIds.includes(proj.id)
+                      ? "Show less"
+                      : `+${proj.tech.length - 4} more`}
+                  </button>
+                )}
               </div>
               <h2 className="text-sm font-bold">Key Features:</h2>
               {proj.features.map((feature, index) => (
