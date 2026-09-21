@@ -281,4 +281,56 @@ export const ProjectsData = [
     ],
     field: "web",
   },
+  {
+    id: 15,
+    name: "Balık Shop",
+    live: "https://balik-shop.vercel.app/",
+    img: "/assets/Balik-shop.png",
+    description:
+      "Balık Shop is a modern, playful e-commerce storefront front end built from the shop's own logo, with a full catalogue, product detail, cart, and multi-step checkout, all wired to mock data so a real API can drop in later.",
+    tech: ["Next.js", "React", "TypeScript", "TailwindCSS", "Vercel"],
+    features: [
+      "Live filters, sort, and search across a 29-product catalogue",
+      "Multi-country, multi-currency experience with localized shipping, COD, and address fields",
+      "Cart drawer, promo codes, and a three-step checkout flow",
+    ],
+    field: "web",
+  },
+  {
+    id: 16,
+    name: "Nocturne Riding Academy",
+    live: "https://horse-riding-academy.vercel.app/",
+    img: "/assets/horse-riding-academy.png",
+    description:
+      "Nocturne Riding Academy is a Next.js web app for a riding academy, with public marketing pages backed by a real booking and enrollment flow where riders book trial sessions and coaches manage riders, schedules, plans, and payments from a dedicated dashboard.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    features: [
+      "Rider trial booking and level-based plan enrollment",
+      "Coach dashboard for riders, schedule, plans, and payments",
+      "Auth with email/password and Google sign-in, secured with Supabase RLS",
+    ],
+    field: "web",
+  },
+  {
+    id: 17,
+    name: "Photographer Portfolio",
+    live: "https://photographer-portfolio-ruby-kappa.vercel.app/",
+    img: "/assets/photographer-portfolio.png",
+    description:
+      "A Next.js photography portfolio built around film/darkroom vernacular, featuring a viewfinder-style hero with an EXIF/HUD readout, a contact-sheet photo grid, and a workprint-style behind-the-scenes section.",
+    tech: ["Next.js", "React", "TypeScript", "TailwindCSS", "Vercel"],
+    features: [
+      "Viewfinder hero with EXIF/HUD-style readout and sprocket-hole rails",
+      "Full archive page with camera/phone and type filters, paginated grid",
+      "Contact-sheet gallery with lightbox and a timecoded BTS section",
+    ],
+    field: "web",
+  },
 ];
